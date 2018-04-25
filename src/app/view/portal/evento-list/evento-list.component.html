@@ -1,13 +1,20 @@
-<ul>
-  <div *ngFor="let evento of eventoPage.content">
-      <ngb-alert type="info" [dismissible]="false">
-          <h3><a href="#">{{ evento?.nome }}</a> </h3>
-          <p>Inicio do Evento: {{ dateLayout(evento?.inicioEvento) }}</p>
-          <p>Fim do Evento: {{ dateLayout(evento?.fimEvento) }}</p>
-          <p>{{ evento?.descricao }}</p>
-          <div>
-              <a href="#" target="_blank" class="btn btn-danger">Go To Course</a>
-          </div>
-      </ngb-alert>
+<div class="row">
+  <div class="col-lg-4 col-sm-6 portfolio-item" *ngFor="let evento of eventoPage.content">
+    <div class="card h-100">
+      <a href="#">
+        <img class="card-img-top" src="http://placehold.it/700x400" alt="">
+      </a>
+      <div class="card-body">
+        <h4 class="card-title">
+          <a href="#">{{ evento?.nome }}</a>
+        </h4>
+        <p class="card-text">Inicio do Evento: {{ dateLayout(evento?.inicioEvento) }}</p>
+        <p class="card-text">Fim do Evento: {{ dateLayout(evento?.fimEvento) }}</p>
+        <p class="card-text">{{ evento?.descricao }}</p>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="btn btn-primary">More Info</a>
+      </div>
+    </div>
   </div>
-</ul>
+</div>
