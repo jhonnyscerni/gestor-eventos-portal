@@ -7,8 +7,10 @@ import { EventoListComponent } from './evento-list/evento-list.component';
 import { EventoService } from '../../service/evento.service';
 import { DateTimeService } from '../../@core/util/date-time.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import * as Moment from 'moment';
+import { NavbarComponent } from './navbar/navbar.component';
 
 export const MY_MOMENT_FORMATS: any = { // See the Moment.js docs for the meaning of these formats: https://momentjs.com/docs/#/displaying/format/
 
@@ -33,10 +35,12 @@ export const MY_MOMENT_FORMATS: any = { // See the Moment.js docs for the meanin
     CommonModule,
     portalRoutes,
     SharedModule,
+    NgbModule.forRoot()
   ],
   declarations: [PortalComponent,
     EventoListComponent,
-  ],
+    NavbarComponent
+],
   providers: [
     EventoService,
     DateTimeService,

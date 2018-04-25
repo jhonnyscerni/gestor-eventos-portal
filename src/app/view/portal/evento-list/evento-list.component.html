@@ -1,1 +1,13 @@
-aksjdh
+<ul>
+  <div *ngFor="let evento of eventoPage.content">
+      <ngb-alert type="info" [dismissible]="false">
+          <h3><a href="#">{{ evento?.nome }}</a> </h3>
+          <p>Inicio do Evento: {{ dateLayout(evento?.inicioEvento) }}</p>
+          <p>Fim do Evento: {{ dateLayout(evento?.fimEvento) }}</p>
+          <p>{{ evento?.descricao }}</p>
+          <div>
+              <a href="#" target="_blank" class="btn btn-danger">Go To Course</a>
+          </div>
+      </ngb-alert>
+  </div>
+</ul>

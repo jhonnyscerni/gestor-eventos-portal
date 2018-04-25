@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -23,6 +24,7 @@ registerLocaleData(localePt, 'pt-BR');
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
+    HttpModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' }
