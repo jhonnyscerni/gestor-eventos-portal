@@ -1,8 +1,10 @@
- <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-white bg-white overflow-visible shadow-3 fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Start Bootstrap</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">
+      <img [routerLink]="['/']" src="assets/imagens/je-mini-logo-white.png" class="je-logo" style="width: 42px; height: 42px; margin-right: 10px; cursor: pointer;"> Eventos do Tribunal Regional Eleitoral do Pará</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -13,15 +15,20 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Informações</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#">Contato</a>
         </li>
       </ul>
+      <div style="margin-right: 10px; margin-left: 10px;">
+        <a href="#" class="btn btn-success text-white">Cadastrar
+          <!-- <span class="glyphicon glyphicon-user img-circle text-primary btn-icon"></span> -->
+        </a>
+      </div>
+      <div>
+        <a href="#" class="btn btn-primary btn-custom text-white">Login</a>
+      </div>
     </div>
   </div>
 </nav>
