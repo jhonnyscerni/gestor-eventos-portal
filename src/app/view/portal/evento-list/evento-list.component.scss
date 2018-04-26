@@ -1,5 +1,5 @@
 .left-menu-header {
-    min-width: 257px;    
+    min-width: 257px;
 }
 
 .custom-search-input {
@@ -53,3 +53,58 @@
     color: #7e8891;
     transition: all .3s;
 }
+
+.black-40 {
+  color: rgba(0,7,20,.4);
+}
+
+.input-text {
+  outline: 0!important;
+  width: 33%;
+  border: none;
+  height: 55px;
+  padding: 0 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  background-color: #f7f9fc;
+  color: #7e8891;
+  transition: all .3s;
+  float: left;
+  margin-left: 33%;
+}
+
+.button-icon {
+  width: 55px;
+  height: 55px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  outline: 0!important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 30px;
+  line-height: 1;
+  color: #fff;
+  background-color: red;
+  padding: 15px 20px;
+  border: none;
+  float: left;
+  margin-left: 10px;
+}
+
+.button-icon .button-icon--text {
+  display: none;
+}
+
+
+.business-header {
+  height: 25vh;
+  min-height: 150px;
+  background-color: #00b0eb;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-bottom: 50px;
+}
+

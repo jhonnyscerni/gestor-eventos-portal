@@ -1,19 +1,53 @@
-<div class="row">
-  <div class="col-lg-4 col-sm-6 portfolio-item" *ngFor="let evento of eventoPage.content">
-    <div class="card h-100">
-      <a href="#">
-        <img class="card-img-top" src="assets/imagens/image-tre.jpg" alt="">
-      </a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">{{ evento?.nome }}</a>
-        </h4>
-        <p class="card-text">Inicio do Evento: {{ dateLayout(evento?.inicioEvento) }}</p>
-        <p class="card-text">Fim do Evento: {{ dateLayout(evento?.fimEvento) }}</p>
-        <p class="card-text">{{ evento?.descricao }}</p>
+<!-- Header with Background Image -->
+<header class="business-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- <div class="text-center  mt-4" style="margin-top: 10px">
+            <img src="assets/imagens/buscar-eventos.svg" width="46" alt="Buscar Eventos">
+          </div> -->
+        <h1 class="display-5 text-center text-white mt-4 black-40">Encontre os Eventos</h1>
+
+        <div class="text-center">
+          <div class="row">
+            <div class="col-sm-12">
+              <input type="text" name="evento" class="input-text" placeholder="Busque seu Evento">
+
+              <button name="button" class="button-icon">
+                <span class="button-icon--text">
+                  Pesquisar
+                </span>
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
       </div>
-      <div class="card-footer">
-        <a href="#" class="btn btn-primary">Veja Mais</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-sm-6 portfolio-item" *ngFor="let evento of eventoPage.content">
+      <div class="card h-100">
+        <a href="#">
+          <img class="card-img-top" src="assets/imagens/image-tre.jpg" alt="">
+        </a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">{{ evento?.nome }}</a>
+          </h4>
+          <p class="card-text">Inicio do Evento: {{ dateLayout(evento?.inicioEvento) }}</p>
+          <p class="card-text">Fim do Evento: {{ dateLayout(evento?.fimEvento) }}</p>
+          <p class="card-text">{{ evento?.descricao }}</p>
+        </div>
+        <div class="card-footer">
+            <a mat-button [routerLink]="['detail', evento?.id]">Detalhes</a>
+        </div>
       </div>
     </div>
   </div>
