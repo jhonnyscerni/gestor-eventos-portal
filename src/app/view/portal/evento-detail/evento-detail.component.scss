@@ -55,7 +55,7 @@ display: none;
 
 .business-header {
 height: 25vh;
-min-height: 150px;
+min-height: 250px;
 background-color: #00b0eb;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -64,3 +64,45 @@ background-size: cover;
 margin-bottom: 50px;
 }
 
+
+.hero-btn {
+  background-color: #fff;
+  text-transform: uppercase;
+  color: #919298;
+  font-weight: 600;
+  padding: 15px 50px;
+  letter-spacing: 1px;
+  -webkit-transition: box-shadow .2s ease-in-out,color .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out,color .2s ease-in-out;
+}
+
+.modal .speaker-title, .section-title {
+  display: block;
+  color: #009039;
+  font-weight: 600;
+  font-size: 28px;
+  position: relative;
+  margin-top: 56px;
+  text-align: center;
+}
+
+.text-box {
+  text-align: center;
+}
+
+.section-title:after {
+  content: "";
+  height: 6px;
+  background-color: #009039;
+  position: relative;
+  display: block;
+  width: 73px;
+  margin: 24px auto 56px;
+}
+
+.text-box p {
+  color: #000000;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
