@@ -20,11 +20,11 @@
       "prefix": "app",
       "styles": [
         "styles.scss",
-        "assets/css/bootstrap.min.css",
+        "assets/css/bootstrap/bootstrap.min.css",
         "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [
-        "assets/js/bootstrap.min.js"
+        "assets/js/bootstrap/bootstrap.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
