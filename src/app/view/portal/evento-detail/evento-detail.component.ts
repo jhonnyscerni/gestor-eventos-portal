@@ -4,6 +4,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { Evento } from '../../../domain/evento';
 
+
+import * as Moment from 'moment'; /*  biblioteca de formatação de data/hora */
+
 @Component({
   selector: 'app-evento-detail',
   templateUrl: './evento-detail.component.html',
@@ -58,5 +61,10 @@ private detalhe() {
 atualizarTituloDetalhe() {
   this.title.setTitle(`Evento: ${this.evento.nome}`);
 }
+
+public dateLayout(dt: any): String {
+  return Moment(dt).format('DD [de] MMMM');
+}
+
 
 }
