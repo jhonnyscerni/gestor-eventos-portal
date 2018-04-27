@@ -21,18 +21,21 @@
       <div class="hero-info-box-item col-1w container-pagina-principal">
         <p>
           <i class="fa fa-search "></i> Evento</p>
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <input type="text" name="evento" class="input-text" placeholder="Nome do evento ...">
+        <form  (ngSubmit)="doSearch()">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <input type="search" name="nome" [(ngModel)]="filtro.nome" class="input-text" placeholder="Nome do evento ...">
 
-            <button name="button" class="button-icon">
-              <span>
-                <i class="fa fa-search icon-search"></i> <div class="button-icon--text">Pesquisar</div>
-              </span>
+              <button name="button" type="submit" class="button-icon">
+                <span>
+                  <i class="fa fa-search icon-search"></i>
+                  <div class="button-icon--text">Pesquisar</div>
+                </span>
 
-            </button>
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
 
         <p>
           <i class="fa fa-th-list"></i> Últimos Eventos</p>

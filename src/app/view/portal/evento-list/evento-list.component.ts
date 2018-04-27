@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import * as Moment from 'moment'; /*  biblioteca de formatação de data/hora */
 import { Evento } from '../../../domain/evento';
@@ -17,11 +17,15 @@ export class EventoListComponent implements OnInit {
 
   eventoPage: Page<Evento> = new Page<Evento>();
 
-  filtro = new EventoFiltro();
+  filtro: Evento = new EventoFiltro();
+
+  eventos: Page<Evento> = new Page<Evento>();
+
 
   constructor(
     private _titleService: Title,
     private eventoService: EventoService,
+    private route: ActivatedRoute,
     private router: Router,
   ) { }
 
@@ -50,12 +54,10 @@ export class EventoListComponent implements OnInit {
     return Moment(dt).format('dddd, DD [de] MMMM [de] YYYY [às] HH:mm:ss');
 }
 
-public pesquisaDescritiva(nome: String): void {
-  if (nome == '') {
-    this.getEventos();
-  } else {
-    this.getEventosPorNome(nome);
-  }
+doSearch() {
+  this.eventoService.getEventosPorNome(this.filtro.nome).subscribe(page => {
+    this.eventoPage = page;
+  })
 }
 
 

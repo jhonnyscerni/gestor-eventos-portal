@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import * as Moment from 'moment';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EventoDetailComponent } from './evento-detail/evento-detail.component';
+import { FormsModule } from '@angular/forms';
 
 export const MY_MOMENT_FORMATS: any = { // See the Moment.js docs for the meaning of these formats: https://momentjs.com/docs/#/displaying/format/
 
@@ -36,7 +37,8 @@ export const MY_MOMENT_FORMATS: any = { // See the Moment.js docs for the meanin
     CommonModule,
     portalRoutes,
     SharedModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule
   ],
   declarations: [PortalComponent,
     EventoListComponent,
