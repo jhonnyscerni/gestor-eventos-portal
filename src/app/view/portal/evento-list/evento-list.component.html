@@ -21,10 +21,13 @@
       <div class="hero-info-box-item col-1w container-pagina-principal">
         <p>
           <i class="fa fa-search "></i> Evento</p>
-        <form  (ngSubmit)="doSearch()">
+        <form autocomplete="off" (ngSubmit)="doSearch()">
           <div class="row">
             <div class="col-sm-12 text-center">
-              <input type="search" name="nome" [(ngModel)]="filtro.nome" class="input-text" placeholder="Nome do evento ...">
+
+              <input type="text" name="sigla" [(ngModel)]="filtro.sigla" class="input-text-sigla" placeholder="Sigla ...">
+
+              <input type="text" name="nome" [(ngModel)]="filtro.nome" class="input-text-nome" placeholder="Nome do evento ...">
 
               <button name="button" type="submit" class="button-icon">
                 <span>
@@ -47,7 +50,7 @@
               </div>
               <div class="card-content">
                 <h3>
-                  <a [routerLink]="['detail', evento?.id]">{{ evento?.nome }}</a>
+                  <a [routerLink]="['detail', evento?.id]">{{evento?.sigla}} - {{ evento?.nome }}</a>
                 </h3>
                 <hr/>
                 <ul class="card-meta">

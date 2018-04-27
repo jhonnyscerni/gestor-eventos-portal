@@ -2,7 +2,7 @@ import { Observable } from 'rxjs/Observable';
 import { Evento } from './../domain/evento';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { Http } from '@angular/http';
+import { Http, URLSearchParams } from '@angular/http';
 import { Page } from '../@core/model/page';
 import 'rxjs/add/operator/map';
 import { DateTimeService } from '../@core/util/date-time.service';
@@ -28,6 +28,21 @@ export class EventoService {
   public getEventosPorNome(nome: String): Observable<Page<Evento>> {
     return this.http.get(this.url + '?nome=' + nome)
       .map(res => res.json());
+  }
+
+  pesquisa(filtro: EventoFiltro): Observable<Page<Evento>> {
+
+    const params = new URLSearchParams();
+
+    if(filtro.nome) {
+      params.set('nome', filtro.nome);
+    }
+
+    if(filtro.sigla) {
+      params.set('sigla', filtro.sigla);
+    }
+
+    return this.http.get(`${this.url}`, {search: params}).map(res => res.json());
   }
 
   /**

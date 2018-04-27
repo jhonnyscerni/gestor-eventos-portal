@@ -17,9 +17,7 @@ export class EventoListComponent implements OnInit {
 
   eventoPage: Page<Evento> = new Page<Evento>();
 
-  filtro: Evento = new EventoFiltro();
-
-  eventos: Page<Evento> = new Page<Evento>();
+  filtro = new EventoFiltro();
 
 
   constructor(
@@ -55,7 +53,7 @@ export class EventoListComponent implements OnInit {
 }
 
 doSearch() {
-  this.eventoService.getEventosPorNome(this.filtro.nome).subscribe(page => {
+  this.eventoService.pesquisa(this.filtro).subscribe(page => {
     this.eventoPage = page;
   })
 }
