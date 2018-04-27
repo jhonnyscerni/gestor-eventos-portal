@@ -220,22 +220,37 @@ cards
   width: calc(100% - 85px);
 }
 
-@media (max-width: 768px){
-.hero-info-box-item {
-    width: calc(100% - 30px)!important;
+.icon-search {
+  display: none;
 }
-}
+
 @media (max-width: 991px){
 .hero-info-box-item {
     padding: 25px 30px 40px;
 }
+.button-icon .button-icon--text {
+  display: none;
 }
+.icon-search {
+  display: inline;
+}
+}
+
 @media (max-width: 768px) {
+  .hero-info-box-item {
+    width: calc(100% - 30px)!important;
+}
 .hero-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
     justify-content: baseline;
+}
+.button-icon .button-icon--text {
+  display: none;
+}
+.icon-search {
+  display: inline;
 }
 }
 
