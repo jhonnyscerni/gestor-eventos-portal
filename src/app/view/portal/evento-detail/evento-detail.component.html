@@ -7,7 +7,7 @@
         <h2 class="display-5 text-center text-white mt-5 black-40" *ngIf="evento?.nome">{{evento?.sigla}} - {{evento?.nome}}</h2>
         <div class="text-center">
           <p>{{evento?.descricao}}</p>
-          <a class="btn hero-btn" href="#" role="button">Faça sua inscrição</a>
+          <a class="btn hero-btn" href="http://localhost:4200/evento/{{evento?.id}}/minha-inscricao" role="button">Faça sua inscrição</a>
         </div>
       </div>
 
