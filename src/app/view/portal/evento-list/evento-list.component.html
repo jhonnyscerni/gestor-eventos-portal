@@ -3,8 +3,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="display-5 text-center text-white mt-5 black-40">Encontre eventos do TRE-PA</h1>
-        <div class="text-center">
+        <h1 class="display-5 text-center text-white black-40 top100" >Encontre eventos</h1>
+        <div class="text-center text-white" style="color: #ff5f17">
           <p>Pesquise eventos por nome, categoria.</p>
         </div>
 
@@ -45,9 +45,9 @@
         <div class="row">
           <div class="col-xs-12 col-sm-4" *ngFor="let evento of eventoPage.content">
             <div class="single-card">
-              <div class="card-photo">
-                <img class="card-img-top" src="assets/imagens/image-tre.jpg" alt="">
-              </div>
+                <div class="card-photo">
+                  <img class="card-img-top" src="assets/imagens/01.jpg" alt="">
+                </div>
               <div class="card-content">
                 <h3>
                   <a [routerLink]="['detail', evento?.id]">{{evento?.sigla}} - {{ evento?.nome }}</a>

@@ -109,8 +109,10 @@
 
 .business-header {
   height: 25vh;
-  min-height: 200px;
-  background-color: #00b0eb;
+  min-height: 260px;
+  /**background-color: #00b0eb;**/
+  background-image: url('assets/imagens/evento-corporativo.jpg');
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -268,5 +270,9 @@ cards
 .icon-search {
   display: inline;
 }
+}
+
+.top100 {
+  margin-top: 80px;
 }
 

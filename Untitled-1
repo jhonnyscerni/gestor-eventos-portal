@@ -1,0 +1,55 @@
+
+
+input color  Line_20_Color = DodgerBlue; // Line 1  Color 
+input bool   Line_20_Visible = true;     // Line 1  Visible
+input string Line_20_Time = "13:03";     // Line 1  Time
+input LW     Line_20_Width = 1;          // Line 1  Width
+input ENUM_LINE_STYLE Line_10_Style = 2; // Line 1  Style
+  
+input color  Line_11_Color = DodgerBlue; // Line 1  Color 
+input bool   Line_11_Visible = true;     // Line 1  Visible
+input string Line_11_Time = "13:10";     // Line 1  Time
+input LW     Line_11_Width = 1;          // Line 1  Width
+input ENUM_LINE_STYLE Line_11_Style = 2; // Line 1  Style
+
+input color  Line_12_Color = DodgerBlue; // Line 2  Color
+input bool   Line_12_Visible = true;     // Line 2  Visible
+input string Line_12_Time = "13:17";     // Line 2  Time 
+input LW     Line_12_Width = 1;          // Line 2  Width
+input ENUM_LINE_STYLE Line_12_Style = 2; // Line 2  Style
+
+input color  Line_13_Color = Magenta;    // Line 3  Color
+input bool   Line_13_Visible = true;    // Line 3  Visible
+input string Line_13_Time = "13:24";     // Line 3  Time
+input LW     Line_13_Width = 1;          // Line 3  Width
+input ENUM_LINE_STYLE Line_13_Style = 2; // Line 3  Style
+
+input color  Line_14_Color = Magenta;    // Line 4  Color
+input bool   Line_14_Visible = true;    // Line 4  Visible
+input string Line_14_Time = "13:31";     // Line 4  Time
+input LW     Line_14_Width = 1;          // Line 4  Width
+input ENUM_LINE_STYLE Line_14_Style = 2; // Line 4  Style
+
+input color  Line_15_Color = DarkOrange; // Line 5  Color
+input bool   Line_15_Visible = true;    // Line 5  Visible
+input string Line_15_Time = "13:38";     // Line 5  Time
+input LW     Line_15_Width = 1;          // Line 5  Width
+input ENUM_LINE_STYLE Line_15_Style = 2; // Line 5  Style
+
+input color  Line_16_Color = DarkOrange; // Line 6  Color
+input bool   Line_16_Visible = true;    // Line 6  Visible 
+input string Line_16_Time = "13:45";     // Line 6  Time
+input LW     Line_16_Width = 1;          // Line 6  Width
+input ENUM_LINE_STYLE Line_16_Style = 2; // Line 6  Style  
+
+input color  Line_17_Color = DarkOrange; // Line 7  Color
+input bool   Line_17_Visible = true;    // Line 7  Visible 
+input string Line_17_Time = "13:52";     // Line 7  Time
+input LW     Line_17_Width = 1;          // Line 7  Width
+input ENUM_LINE_STYLE Line_17_Style = 2; // Line 7  Style  
+
+input color  Line_18_Color = DarkOrange; // Line 8  Color
+input bool   Line_18_Visible = true;    // Line 8  Visible 
+input string Line_18_Time = "13:59";     // Line 8  Time
+input LW     Line_18_Width = 1;          // Line 8  Width
+input ENUM_LINE_STYLE Line_18_Style = 2; // Line 8  Style 
