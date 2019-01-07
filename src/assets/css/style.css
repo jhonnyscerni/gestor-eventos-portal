@@ -3959,7 +3959,7 @@ a.btn_search_mobile.map_view {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .hero_in.hotels_detail {
-  height: 550px;
+  height: 450px;
 }
 @media (max-width: 767px) {
   .hero_in.hotels_detail {
