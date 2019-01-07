@@ -1,78 +1,197 @@
 <!-- Header with Background Image -->
-<header class="business-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 class="display-5 text-center text-white black-40 top100" >Encontre eventos</h1>
-        <div class="text-center text-white" style="color: #ff5f17">
-          <p>Pesquise eventos por nome, categoria.</p>
-        </div>
+<header></header>
 
-      </div>
-    </div>
-  </div>
-</header>
-
-<div class="container">
-
-  <div class="row">
-
-    <div class="hero-info">
-      <div class="hero-info-box-item col-1w container-pagina-principal">
-        <p>
-          <i class="fa fa-search "></i> Evento</p>
+<main class="pattern">
+  <section class="hero_single version_2">
+    <div class="wrapper">
+      <div class="container">
+        <h3>Encontre os principais Eventos!</h3>
+        <p>Viva experiências únicas</p>
         <form autocomplete="off" (ngSubmit)="doSearch()">
-          <div class="row">
-            <div class="col-sm-12 text-center">
-
-              <input type="text" name="sigla" [(ngModel)]="filtro.sigla" class="input-text-sigla" placeholder="Sigla ...">
-
-              <input type="text" name="nome" [(ngModel)]="filtro.nome" class="input-text-nome" placeholder="Nome do evento ...">
-
-              <button name="button" type="submit" class="button-icon">
-                <span>
-                  <i class="fa fa-search icon-search"></i>
-                  <div class="button-icon--text">Pesquisar</div>
-                </span>
-
-              </button>
-            </div>
-          </div>
-        </form>
-
-        <p>
-          <i class="fa fa-th-list"></i> Últimos Eventos</p>
-        <div class="row">
-          <div class="col-xs-12 col-sm-4" *ngFor="let evento of eventoPage.content">
-            <div class="single-card">
-                <div class="card-photo">
-                  <img class="card-img-top" src="assets/imagens/01.jpg" alt="">
-                </div>
-              <div class="card-content">
-                <h3>
-                  <a [routerLink]="['detail', evento?.id]">{{evento?.sigla}} - {{ evento?.nome }}</a>
-                </h3>
-                <hr/>
-                <ul class="card-meta">
-                  <li>
-                    <span class="fa fa-calendar"></span> Inicio do Evento: {{ dateLayout(evento?.inicioEvento) }}</li>
-                  <li>
-                    <span class="fa fa-calendar"></span> Fim do Evento: {{ dateLayout(evento?.fimEvento) }}
-                  </li>
-                </ul>
-                <p>{{ evento?.descricao }}</p>
-                <hr/>
-                <a mat-button [routerLink]="['detail', evento?.id]">Detalhes</a>
+          <div class="row no-gutters custom-search-input-2">
+            <div class="col-lg-4">
+              <div class="form-group">
+                <input class="form-control" type="text" name="sigla" [(ngModel)]="filtro.sigla" placeholder="Sigla ...">
+                <i class="icon_search"></i>
               </div>
             </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input type="text" name="nome" [(ngModel)]="filtro.nome" class="form-control" placeholder="Nome do evento ...">
+                <i class="icon_search"></i>
+                <!-- <i class="icon_pin_alt"></i>-->
+              </div>
+            </div>
+            <!-- <div class="col-lg-3">
+              <select class="wide">
+                <option>All Categories</option>
+                <option>Shops</option>
+                <option>Hotels</option>
+                <option>Restaurants</option>
+                <option>Bars</option>
+                <option>Events</option>
+                <option>Fitness</option>
+              </select>
+            </div>-->
+            <div class="col-lg-2">
+              <input type="submit" value="Search">
+            </div>
           </div>
-        </div>
-
-
-
+          <!-- /row -->
+        </form>
       </div>
+    </div>
+  </section>
+  <!-- /hero_single -->
 
+ <!-- <div class="main_categories">
+    <div class="container">
+      <ul class="clearfix">
+        <li>
+          <a href="#">
+            <i class="icon-shop"></i>
+            <h3>Shops</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon-lodging"></i>
+            <h3>Hotels</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon-restaurant"></i>
+            <h3>Restaurants</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon-bar"></i>
+            <h3>Bars</h3>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon-dot-3"></i>
+            <h3>More</h3>
+          </a>
+        </li>
+      </ul>
+    </div>
+  /container
+  </div>-->
+  <!-- /main_categories -->
+
+  <div class="container margin_60_35">
+
+    <div class="main_title_3">
+      <span></span>
+      <h2>Últimos Eventos</h2>
+      <p>confira os últimos eventos</p>
     </div>
 
+    <div class="col-lg-9">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="strip grid" *ngFor="let evento of eventoPage.content">
+            <figure>
+              <a href="#0" class="wish_bt"></a>
+              <a href="#">
+                <img src="assets/img/location_1.jpg" class="img-fluid" alt="">
+                <div class="read_more"><span>Veja Mais</span></div>
+              </a>
+              <small>Evento</small>
+            </figure>
+            <div class="wrapper">
+              <h3><a [routerLink]="['detail', evento?.id]">{{evento?.sigla}} - {{ evento?.nome }} </a></h3>
+              <small></small>
+              <small> <span class="fa fa-calendar"></span> Inicio do Evento: {{ dateLayout(evento?.inicioEvento) }}</small>
+              <small> <span class="fa fa-calendar"></span> Fim do Evento: {{ dateLayout(evento?.fimEvento) }}</small>
+              <p>{{ evento?.descricao }}</p>
+              <a class="address" href="#">Local</a>
+            </div>
+
+            <ul>
+              <li><span class="loc_open">Aberto</span></li>
+              <li>
+                <a mat-button [routerLink]="['detail', evento?.id]">Detalhes</a>
+                <!-- <div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div> -->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /strip grid -->
+
+      </div>
+    </div>
+
+
   </div>
-</div>
+
+
+  <div class="call_section">
+    <div class="wrapper">
+      <div class="container margin_80_55">
+        <div class="main_title_2">
+          <span><em></em></span>
+          <h2>How it Works</h2>
+          <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box_how">
+              <i class="pe-7s-search"></i>
+              <h3>Search Locations</h3>
+              <p>An nec placerat repudiare scripserit, temporibus complectitur at sea, vel ignota fierent eloquentiam
+                id.</p>
+              <span></span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box_how">
+              <i class="pe-7s-info"></i>
+              <h3>View Location Info</h3>
+              <p>An nec placerat repudiare scripserit, temporibus complectitur at sea, vel ignota fierent eloquentiam
+                id.</p>
+              <span></span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box_how">
+              <i class="pe-7s-like2"></i>
+              <h3>Book, Reach or Call</h3>
+              <p>An nec placerat repudiare scripserit, temporibus complectitur at sea, vel ignota fierent eloquentiam
+                id.</p>
+            </div>
+          </div>
+        </div>
+        <!-- /row -->
+        <p class="text-center add_top_30 wow bounceIn" data-wow-delay="0.5s"><a href="#" class="btn_1 rounded">Register
+            Now</a></p>
+      </div>
+      <canvas id="hero-canvas" width="1920" height="1080"></canvas>
+    </div>
+    <!-- /wrapper -->
+  </div>
+  <!--/call_section-->
+
+  <div class="container margin_80_55">
+    <div class="main_title_2">
+      <span><em></em></span>
+      <h2>Sparker App Available</h2>
+      <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-6">
+        <img src="assets/img/mobile.svg" alt="" class="img-fluid add_bottom_45">
+        <div class="app_icons">
+          <a href="#0" class="pr-lg-2"><img src="assets/img/app_android.svg" alt=""></a>
+          <a href="#0" class="pl-lg-2"><img src="assets/img/app_apple.svg" alt=""></a>
+        </div>
+        <div class="add_bottom_15"><small>*An eum dolores tractatos, aeterno menandri deseruisse ut eum.</small></div>
+      </div>
+    </div>
+  </div>
+  <!-- /container -->
+</main>

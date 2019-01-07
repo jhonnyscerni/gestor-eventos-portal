@@ -1,3 +1,4 @@
+import { HeaderComponent } from './header/header.component';
 import { NgModule, LOCALE_ID, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortalComponent } from './portal.component';
@@ -43,6 +44,7 @@ export const MY_MOMENT_FORMATS: any = { // See the Moment.js docs for the meanin
   declarations: [PortalComponent,
     EventoListComponent,
     NavbarComponent,
+    HeaderComponent,
     EventoDetailComponent
 ],
   providers: [
