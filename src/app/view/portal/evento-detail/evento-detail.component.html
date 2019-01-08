@@ -17,8 +17,13 @@
 </header>
 -->
 
+<div id="page" class="theia-exception">
+<app-header-detail></app-header-detail>
+</div>
+
 <main>
-		<div class="hero_in hotels_detail">
+		<div class="text-center">
+      <img src="assets/imagens/1b.jpg"  width="100%"/>
 			<div class="wrapper">
 			</div>
     </div>
@@ -39,31 +44,49 @@
 						</section>
 						<!-- /section -->
 
-
-							<div class="add-review">
-								<h5>Entre em Contato</h5>
-								<form>
-									<div class="row">
-										<div class="form-group col-md-6">
-											<label>Nome Completo *</label>
-											<input type="text" name="name_review" id="name_review" placeholder="" class="form-control">
-										</div>
-										<div class="form-group col-md-6">
-											<label>Email *</label>
-											<input type="email" name="email_review" id="email_review" class="form-control">
-										</div>
-										<div class="form-group col-md-12">
-											<label>Assunto:</label>
-											<textarea name="review_text" id="review_text" class="form-control" style="height:130px;"></textarea>
-										</div>
-										<div class="form-group col-md-12 add_top_20 add_bottom_30">
-											<input type="submit" value="Submit" class="btn_1" id="submit-review">
-										</div>
-									</div>
-								</form>
-							</div>
 					</div>
-					<!-- /col -->
+          <!-- /col -->
+
+          <aside class="col-lg-4" id="sidebar">
+              <div class="box_detail booking">
+                  <div class="price">
+                      <h3 class="d-inline">Faça sua inscrição</h3>
+                 </div>
+                 <div class="text-center">
+                    <a class="add_top_30 btn_1 full-width purchase" id="submit-contact-detail" href="http://localhost:4200/evento/{{evento?.id}}/minha-inscricao" role="button">Inscrever</a>
+                </div>
+              </div>
+
+
+              <div class="box_detail booking">
+                <div class="price">
+                  <h5 class="d-inline">Contato</h5>
+               </div>
+                <div id="message-contact-detail"></div>
+                <form method="post" action="assets/contact_detail.php" id="contact_detail" autocomplete="off">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Name" name="name_detail" id="name_detail">
+                    <i class="ti-user"></i>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="email" placeholder="Email" name="email_detail" id="email_detail">
+                    <i class="icon_mail_alt"></i>
+                  </div>
+                  <div class="form-group">
+                    <textarea placeholder="Your message" class="form-control" name="message_detail" id="message_detail"></textarea>
+                    <i class="ti-pencil"></i>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Contact us" class="add_top_30 btn_1 full-width purchase" id="submit-contact-detail">
+                  </div>
+                </form>
+              </div>
+              <ul class="share-buttons">
+                <li><a class="fb-share" href="#0"><i class="social_facebook"></i> Share</a></li>
+                <li><a class="twitter-share" href="#0"><i class="social_twitter"></i> Tweet</a></li>
+                <li><a class="gplus-share" href="#0"><i class="social_googleplus"></i> Share</a></li>
+              </ul>
+            </aside>
 
 				</div>
 				<!-- /row -->

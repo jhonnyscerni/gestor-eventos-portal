@@ -1,3 +1,4 @@
+import { HeaderDetailComponent } from './header-detail/header-detail.component';
 import { HeaderComponent } from './header/header.component';
 import { NgModule, LOCALE_ID, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +12,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import * as Moment from 'moment';
-import { NavbarComponent } from './navbar/navbar.component';
 import { EventoDetailComponent } from './evento-detail/evento-detail.component';
 import { FormsModule } from '@angular/forms';
 
@@ -43,8 +43,8 @@ export const MY_MOMENT_FORMATS: any = { // See the Moment.js docs for the meanin
   ],
   declarations: [PortalComponent,
     EventoListComponent,
-    NavbarComponent,
     HeaderComponent,
+    HeaderDetailComponent,
     EventoDetailComponent
 ],
   providers: [

@@ -1,3 +1,11 @@
+
+<div id="page">
+
+    <app-header></app-header>
+
+</div>
+
+
 <main class="pattern">
   <section class="hero_single version_2">
     <div class="wrapper">
@@ -93,8 +101,8 @@
         <div class="col-md-6">
           <div class="strip grid" *ngFor="let evento of eventoPage.content">
             <figure>
-              <a href="#0" class="wish_bt"></a>
-              <a href="#">
+              <a [routerLink]="['detail', evento?.id]" class="wish_bt"></a>
+              <a [routerLink]="['detail', evento?.id]">
                 <img src="assets/img/location_1.jpg" class="img-fluid" alt="">
                 <div class="read_more"><span>Veja Mais</span></div>
               </a>
