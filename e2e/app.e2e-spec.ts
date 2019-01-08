@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('seven-portal App', () => {
+describe('siberius-portal App', () => {
   let page: AppPage;
 
   beforeEach(() => {
